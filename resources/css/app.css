@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+/*FUNCIONAL QUANDO ATIVA A TAB*/
+/* .tab-lifted.tab-active:not(.tab-disabled):not([disabled]) {
+    background-color: rgba(255, 255, 255, 0);
+   
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-bottom: none;
+} */
+
+.tab{
+    color: burlywood;
+    
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    line-height: 2;
+
+    border-width: 2px;
+
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-color: rgb(149, 149, 149);
+
+}
+.selectedtab{
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-top-color:rgb(149, 149, 149);
+    border-left-color:rgb(149, 149, 149);
+    border-right-color:rgb(149, 149, 149);
+    border-bottom-color:rgb(23, 23, 23);
+  
+    border-width: 2px;
+    border-radius: 10px 10px 0px 0px;
+    
+}

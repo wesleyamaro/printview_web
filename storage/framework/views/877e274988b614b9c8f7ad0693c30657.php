@@ -1,0 +1,320 @@
+<div>
+    
+    <?php if (isset($component)) { $__componentOriginal10717d162484e57a570d6d2cc4597545 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal10717d162484e57a570d6d2cc4597545 = $attributes; } ?>
+<?php $component = WireUi\View\Components\Notifications::resolve(['zIndex' => 'z-50'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('notifications'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Notifications::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal10717d162484e57a570d6d2cc4597545)): ?>
+<?php $attributes = $__attributesOriginal10717d162484e57a570d6d2cc4597545; ?>
+<?php unset($__attributesOriginal10717d162484e57a570d6d2cc4597545); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal10717d162484e57a570d6d2cc4597545)): ?>
+<?php $component = $__componentOriginal10717d162484e57a570d6d2cc4597545; ?>
+<?php unset($__componentOriginal10717d162484e57a570d6d2cc4597545); ?>
+<?php endif; ?>
+
+     <?php $__env->slot('header', null, []); ?> 
+        <h2 class="flex gap-x-2 font-semibold text-xl text-orange-600 dark:text-orange-500 leading-tight">
+            <svg class="w-5 h-5 text-orange-600 dark:text-orange-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                <path d="M14 7h-1.5V4.5a4.5 4.5 0 1 0-9 0V7H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Zm-5 8a1 1 0 1 1-2 0v-3a1 1 0 1 1 2 0v3Zm1.5-8h-5V4.5a2.5 2.5 0 1 1 5 0V7Z"/>
+            </svg>
+            <?php echo e(__('Bloquear referência(s)')); ?>
+
+        </h2>
+     <?php $__env->endSlot(); ?>
+
+    <div class="px-2 py-5">
+
+        <div class="w-full md:w-10/12 mx-auto sm:px-2 lg:p-3 bg-white dark:bg-slate-800 rounded-lg">
+
+            <div class=" bg-slate-300 dark:bg-slate-900 p-2 rounded-lg">
+                
+
+                <div class="w-full md:w-3/12">
+                    <?php if (isset($component)) { $__componentOriginalba37bc18e15fb5b3998ec0574c6b817c = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c = $attributes; } ?>
+<?php $component = WireUi\View\Components\Select::resolve(['label' => 'Encontre o usuário que deseja bloquear a referência','placeholder' => 'Selecione um usuário','emptyMessage' => 'Cliente não encontrado'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('select'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Select::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model.live' => 'selectedUser']); ?>
+                        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $userList; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $users): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if (isset($component)) { $__componentOriginal69737e411223b90b08f97b8064d75edb = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal69737e411223b90b08f97b8064d75edb = $attributes; } ?>
+<?php $component = WireUi\View\Components\Select\UserOption::resolve(['src' => ''.e($users->profile_photo_path ? asset('storage/' . $users->profile_photo_path) : 'https://cdn-icons-png.flaticon.com/512/149/149071.png').'','label' => ''.e($users->name).'','value' => ''.e($users->id).'','description' => ''.e($users->email).''] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('select.user-option'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Select\UserOption::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:key' => ''.e($users->id).'']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal69737e411223b90b08f97b8064d75edb)): ?>
+<?php $attributes = $__attributesOriginal69737e411223b90b08f97b8064d75edb; ?>
+<?php unset($__attributesOriginal69737e411223b90b08f97b8064d75edb); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal69737e411223b90b08f97b8064d75edb)): ?>
+<?php $component = $__componentOriginal69737e411223b90b08f97b8064d75edb; ?>
+<?php unset($__componentOriginal69737e411223b90b08f97b8064d75edb); ?>
+<?php endif; ?>                       
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                     <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c)): ?>
+<?php $attributes = $__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c; ?>
+<?php unset($__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalba37bc18e15fb5b3998ec0574c6b817c)): ?>
+<?php $component = $__componentOriginalba37bc18e15fb5b3998ec0574c6b817c; ?>
+<?php unset($__componentOriginalba37bc18e15fb5b3998ec0574c6b817c); ?>
+<?php endif; ?>          
+                    
+                </div>
+
+                
+                
+            </div>
+
+            <div class="md:flex mt-5 bg-white dark:bg-slate-800 overflow-hidden shadow-xl rounded-lg">
+                
+                <!--PERMISSOES DISPONIVEIS -->
+                <div class="bg-blue-400 md:w-6/12 rounded-lg">
+                    
+                    <div class="bg-blue-800 p-2 rounded-t-lg">
+                        <h1 class="text-white">Referência(s) disponívei(s)</h1>
+                    </div>
+
+                    <div class="p-2">
+                        <?php if (isset($component)) { $__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e = $attributes; } ?>
+<?php $component = WireUi\View\Components\Input::resolve(['icon' => 'search'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('input-wire'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Input::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model.live' => 'search','placeholder' => 'pesquise a referência...']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e)): ?>
+<?php $attributes = $__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e; ?>
+<?php unset($__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e)): ?>
+<?php $component = $__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e; ?>
+<?php unset($__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e); ?>
+<?php endif; ?>
+                        <!--div table -->
+                        <div class="mt-2 max-h-96 md:max-h-50v relative overflow-x-hidden overflow-y-auto soft-scrollbar shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead class="sticky top-0 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="p-4">
+                                            <div class="flex items-center">
+                                                <input wire:model.live="checkboxAllDisponivel"  id="checkbox-all" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="px-0 py-3">
+                                            #
+                                        </th>
+                                        <th scope="col" class="px-0 py-3">
+                                            Referência
+                                        </th>
+                                        <th scope="col" class="px-0 py-3">
+                                            Descrição
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $referenciasNaoAssociadasAoUsuario; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $naoassociadas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">                                          
+                                            <td class="w-4 p-4">
+                                                <div class="flex items-center">
+                                                    <input wire:model.live="checkboxDisponivel" value="<?php echo e($naoassociadas->id); ?>"  wire:key="<?php echo e($naoassociadas->id); ?>" id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                                </div>
+                                            </td>
+                                            <td scope="row" class="px-0 py-4 text-gray-900 whitespace-nowrap dark:text-gray-400">
+                                                <?php echo e('#'.$naoassociadas->id); ?>
+
+                                            </td>
+                                            <th scope="row" class="px-0 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <?php echo e($naoassociadas->referencia); ?>
+
+                                            </th>
+
+                                            <td scope="row" class="px-0 py-4 font-medium uppercase text-gray-900 whitespace-nowrap dark:text-white">
+                                                <?php echo e($naoassociadas->descricao); ?>
+
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                                            <tr>
+                                                <th>
+                                                   <h1 class="text-red-600">Nada encotrado!</h1> 
+                                                </th>
+                                            </tr>
+                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                          
+                        
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Fim div table -->
+                        <div class="mt-3">
+                            
+                            <button wire:click="adicionarReferenciaAoUsuario" type="button" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Liberar selecionados
+                                <span class="inline-flex items-center justify-center min-w-4 w-auto h-4 ms-2 p-1 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                                <?php echo e($totalselected); ?>
+
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--PERMISSOES DISPONIVEIS - FIM-->
+
+                <div class="flex items-center justify-center  p-2">
+                    <svg class="w-5 h-5 rotate-90 md:rotate-0 text-gray-800 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
+                    </svg>
+                </div>
+
+                <!--PERMISSOES LIBERADAS -->
+                <div class="bg-red-400 md:w-6/12 rounded-lg">
+                    
+                    <div class="bg-red-800 p-2 rounded-t-lg">
+                        <h1 class="text-white">Referência(s) bloqueada(s)</h1>
+                    </div>
+
+                    <div class="p-2">
+                        <?php if (isset($component)) { $__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e = $attributes; } ?>
+<?php $component = WireUi\View\Components\Input::resolve(['icon' => 'search'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('input-wire'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Input::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model.live' => 'searchAssociados','placeholder' => 'pesquise a referência...']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e)): ?>
+<?php $attributes = $__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e; ?>
+<?php unset($__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e)): ?>
+<?php $component = $__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e; ?>
+<?php unset($__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e); ?>
+<?php endif; ?>
+
+                         <!--div table -->
+                         <div class="mt-2 max-h-96 md:max-h-50v relative overflow-x-hidden overflow-y-auto soft-scrollbar shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead class="sticky top-0 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="p-4">
+                                            <div class="flex items-center">
+                                                <input wire:model.live="checkboxAllLiberados" id="checkbox-all-liberados" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="checkbox-all-liberados" class="sr-only">checkbox</label>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="px-0 py-3">
+                                            #
+                                        </th>
+                                        <th scope="col" class="px-0 py-3">
+                                            Referência
+                                        </th>
+                           
+                                        <th scope="col" class="px-6 py-3">
+                                            Descrição
+                                        </th>
+
+                                        <th scope="col" class="px-6 py-3">
+                                            Ação
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--[if BLOCK]><![endif]--><?php $__empty_1 = true; $__currentLoopData = $referenciasAssociadasAoUsuario; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $associadas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <td class="w-4 p-4">
+                                            <div class="flex items-center">
+                                                <input wire:model.live="checkboxLiberados" value="<?php echo e($associadas->id); ?>" id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td scope="row" class="px-0 py-4 text-gray-900 whitespace-nowrap dark:text-gray-400">
+                                            <?php echo e('#' . $associadas->id); ?>
+
+                                        </td>
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            <?php echo e($associadas->referencia); ?>
+
+                                        </th>
+                                        <th scope="row" class="px-6 py-4 uppercase font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            <?php echo e($associadas->descricao); ?>
+
+                                        </th>
+                               
+                                        <td class="flex items-center px-6 py-4">                       
+                                            <a wire:click="removeReferenciaUser(<?php echo e($associadas->id); ?>)" wire:key="<?php echo e($associadas->id); ?>" class="font-medium text-red-600 dark:text-red-400 hover:underline ms-3 cursor-pointer">Remover</a>
+                                        </td>
+                                    </tr>
+
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                                            <tr>
+                                                <th>
+                                                    <h1 class="text-red-600">Nada encotrado!</h1> 
+                                                </th>
+                                            </tr>
+                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                          
+                        
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Fim div table -->
+
+                        <div class="mt-3">
+                            
+                            <button wire:click="removerReferenciaSelecionadas" type="button" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                                Remover selecionados
+                                <span class="inline-flex items-center justify-center min-w-4 w-auto h-4 ms-2 p-1 text-xs font-semibold text-red-800 bg-red-200 rounded-full">
+                                <?php echo e($totalselectedLiberados); ?>
+
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <!--PERMISSOES DISPONIVEIS - FIM-->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+<?php /**PATH /home/u637911780/domains/printview.shop/resources/views/livewire/users/bloquear-referencia.blade.php ENDPATH**/ ?>

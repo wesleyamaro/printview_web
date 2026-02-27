@@ -1,0 +1,13 @@
+<div class="w-10/12 m-auto max-h-modal p-2 md:p-5  rounded-lg ">
+    
+    <div role="status" class="max-w-lg animate-pulse">
+        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+        <span class="sr-only">Loading...</span>
+    </div>
+
+</div><?php /**PATH /home/u637911780/domains/printview.shop/storage/framework/views/66c30482b05fcf715ae364762f2233b3.blade.php ENDPATH**/ ?>

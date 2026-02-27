@@ -1,0 +1,170 @@
+  <!--Div info inicio -->
+  <div class="col-span-full">
+
+
+      <div class="flex flex-col space-y-3 mb-3">
+
+          <div
+              class="flex justify-between w-full border-2 border-dotted border-slate-300 dark:border-slate-600 rounded-md p-2">
+              <strong class="flex gap-x-2 dark:text-gray-400 text-sm md:text-base">Total de itens:
+                  <h1 class="text-green-600 dark:text-green-400 text-sm md:text-base"> <?php echo e($itens_qnde); ?></h1>
+              </strong>
+              
+              <strong class="flex gap-x-2 dark:text-gray-400 text-sm md:text-base">Qnde total de pares:
+                  <h1 class="text-green-600 dark:text-green-400 text-sm md:text-base"> <?php echo e($pares_qnde); ?></h1>
+              </strong>
+          </div>
+
+          <div
+              class="flex flex-col gap-y-2 items-start justify-between w-full border-2 border-dotted border-slate-300 dark:border-slate-600 rounded-md p-2">
+
+
+              <div class="w-full rounded-md ">
+                  <?php if (isset($component)) { $__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e = $attributes; } ?>
+<?php $component = WireUi\View\Components\Input::resolve(['label' => 'Marca*'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('input-wire'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Input::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model' => 'marca','placeholder' => '****','class' => 'dark:text-blue-500']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e)): ?>
+<?php $attributes = $__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e; ?>
+<?php unset($__attributesOriginalf2cba1c7f87bbadef8ee9a6866b4816e); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e)): ?>
+<?php $component = $__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e; ?>
+<?php unset($__componentOriginalf2cba1c7f87bbadef8ee9a6866b4816e); ?>
+<?php endif; ?>
+              </div>
+
+              <div class="w-full">
+                <?php if (isset($component)) { $__componentOriginalba37bc18e15fb5b3998ec0574c6b817c = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c = $attributes; } ?>
+<?php $component = WireUi\View\Components\Select::resolve(['label' => 'Grupo*','placeholder' => 'Selecione o grupo','options' => ['bebê', 'feminino', 'infantil', 'juvenil', 'masculino']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('select'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Select::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model.live' => 'grupo','class' => 'capitalize']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c)): ?>
+<?php $attributes = $__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c; ?>
+<?php unset($__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalba37bc18e15fb5b3998ec0574c6b817c)): ?>
+<?php $component = $__componentOriginalba37bc18e15fb5b3998ec0574c6b817c; ?>
+<?php unset($__componentOriginalba37bc18e15fb5b3998ec0574c6b817c); ?>
+<?php endif; ?>
+            </div>
+
+              <div class="w-full rounded-md ">
+                  
+                  <?php if (isset($component)) { $__componentOriginal05e078adad918d7a9c127c65d98f7d47 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal05e078adad918d7a9c127c65d98f7d47 = $attributes; } ?>
+<?php $component = WireUi\View\Components\Textarea::resolve(['label' => 'Grade*'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('textarea-wire'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Textarea::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model' => 'grade','rows' => '4','class' => 'max-h-20 overflow-y-auto soft-scrollbar block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-blue-400 dark:focus:ring-blue-500 dark:focus:border-blue-500','placeholder' => 'Grade do pedido...']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal05e078adad918d7a9c127c65d98f7d47)): ?>
+<?php $attributes = $__attributesOriginal05e078adad918d7a9c127c65d98f7d47; ?>
+<?php unset($__attributesOriginal05e078adad918d7a9c127c65d98f7d47); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal05e078adad918d7a9c127c65d98f7d47)): ?>
+<?php $component = $__componentOriginal05e078adad918d7a9c127c65d98f7d47; ?>
+<?php unset($__componentOriginal05e078adad918d7a9c127c65d98f7d47); ?>
+<?php endif; ?>
+              </div>
+
+              
+
+              <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('EDIT-STATUS-PEDIDO', $permissao)): ?>
+                  <div class="flex items-end gap-x-2 w-full mt-5">
+                      <?php if (isset($component)) { $__componentOriginalba37bc18e15fb5b3998ec0574c6b817c = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c = $attributes; } ?>
+<?php $component = WireUi\View\Components\Select::resolve(['clearable' => 'false','label' => 'Status do  pedido','placeholder' => 'Selecione o status','options' => ['Aberto', 'cadastrado', 'Cancelado']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('select'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Select::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['autocomplete' => 'off','wire:model.live' => 'statuspedido','class' => 'text-blue-500']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c)): ?>
+<?php $attributes = $__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c; ?>
+<?php unset($__attributesOriginalba37bc18e15fb5b3998ec0574c6b817c); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalba37bc18e15fb5b3998ec0574c6b817c)): ?>
+<?php $component = $__componentOriginalba37bc18e15fb5b3998ec0574c6b817c; ?>
+<?php unset($__componentOriginalba37bc18e15fb5b3998ec0574c6b817c); ?>
+<?php endif; ?>
+                      
+                  </div>
+              <?php endif; ?>
+
+              
+
+
+              <div
+                  class="flex gap-x-2 border-2 border-dotted border-slate-300 dark:border-slate-600 rounded-md p-2 w-full">
+                  <h1 class="text-gray-600 dark:text-gray-400 "> Motivo do cancelamento:</h1>
+                  <div class="overflow-y-auto soft-scrollbar max-h-7">
+                      <h1 class="text-orange-600 dark:text-orange-400 text-sm md:text-base"> <?php echo e($motivo_cancelamento); ?>
+
+                      </h1>
+                  </div>
+              </div>
+
+
+          </div>
+
+
+          <div class="w-full">
+              <?php if (isset($component)) { $__componentOriginal05e078adad918d7a9c127c65d98f7d47 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal05e078adad918d7a9c127c65d98f7d47 = $attributes; } ?>
+<?php $component = WireUi\View\Components\Textarea::resolve(['label' => 'Observações'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('textarea-wire'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(WireUi\View\Components\Textarea::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire:model' => 'observacao','rows' => '4','class' => 'max-h-20 overflow-y-auto soft-scrollbar block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-blue-400 dark:focus:ring-blue-500 dark:focus:border-blue-500','placeholder' => 'Observação do pedido...']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal05e078adad918d7a9c127c65d98f7d47)): ?>
+<?php $attributes = $__attributesOriginal05e078adad918d7a9c127c65d98f7d47; ?>
+<?php unset($__attributesOriginal05e078adad918d7a9c127c65d98f7d47); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal05e078adad918d7a9c127c65d98f7d47)): ?>
+<?php $component = $__componentOriginal05e078adad918d7a9c127c65d98f7d47; ?>
+<?php unset($__componentOriginal05e078adad918d7a9c127c65d98f7d47); ?>
+<?php endif; ?>
+          </div>
+
+
+
+          
+
+
+
+      </div>
+
+  </div>
+  <!--Div info fim -->
+<?php /**PATH /home/u637911780/domains/printview.shop/resources/views/components/pedidos/md/editor/complementoPedidoMD.blade.php ENDPATH**/ ?>
