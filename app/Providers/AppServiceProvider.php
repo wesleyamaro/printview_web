@@ -26,7 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $permissao = Regra::all();
-        view()->share('permissao', $permissao);
+        if (!App::runningInConsole()) {
+            $permissao = Regra::all();
+            view()->share('permissao', $permissao);
+        }
     }
 }
