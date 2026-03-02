@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\App;
 use App\Models\Regra;
 
 use Illuminate\Support\Facades\Gate;
@@ -27,12 +28,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if (!App::runningInConsole()) {
-            //$permissao = Regra::all();
-                $permissao = [
-                    'admin' => 'Administrador',
-                    'editor' => 'Editor',
-                    'viewer' => 'Visualizador',
-                        ];
+            $permissao = Regra::all();
             view()->share('permissao', $permissao);
         }
     }
