@@ -1,18 +1,13 @@
 services:
-    healthcheck:
   laravel:
     image: bitnami/laravel:latest
     restart: always
     environment:
-      - APP_KEY=base64:$(openssl rand -base64 32)
       - DB_HOST=${DB_HOST}
       - DB_PORT=3306
-      - DB_DATABASE=laravel
+      - DB_DATABASE=${DB_DATABASE}
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
-    # Removi o docker.sock daqui para evitar o erro de sintaxe
-    volumes:
-      - .:/app
     depends_on:
       - mariadb
 
