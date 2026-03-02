@@ -1,20 +1,37 @@
 services:
-  # Aplicação Laravel
-  laravel:
+  # 1. PHP-FPM (Processa o código PHP)
+  app:
     image: bitnami/laravel:latest
+    container_name: laravel_app
     restart: always
     environment:
       - DB_HOST=mariadb
-      - DB_PORT=3306
       - DB_DATABASE=laravel
       - DB_USERNAME=dokploy
       - DB_PASSWORD=password
+    volumes:
+      - .:/app
     depends_on:
       - mariadb
 
-  # Banco de Dados
+  # 2. NGINX (Servidor Web que entrega os arquivos)
+  nginx:
+    image: nginx:alpine
+    container_name: laravel_nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+      # Nota: Você precisará de um arquivo nginx.conf no seu Git
+      # ou mapear um volume de configuração aqui.
+    depends_on:
+      - app
+
+  # 3. Banco de Dados
   mariadb:
     image: mariadb:10.11
+    container_name: laravel_db
     restart: always
     environment:
       - MARIADB_DATABASE=laravel
@@ -24,16 +41,12 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
 
-  # phpMyAdmin para gerenciar o banco via browser
+  # 4. phpMyAdmin
   phpmyadmin:
     image: phpmyadmin:latest
     restart: always
-    ports:
-      - "8080:80"
     environment:
       - PMA_HOST=mariadb
-      - PMA_ARBITRARY=1
-      - MYSQL_ROOT_PASSWORD=root_password
     depends_on:
       - mariadb
 
