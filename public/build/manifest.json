@@ -1,0 +1,17 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-Dz5qXuF7.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-IxZlNJYv.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/cart.js": {
+    "file": "assets/cart-L03nOMBT.js",
+    "isEntry": true,
+    "src": "resources/js/cart.js"
+  }
+}
