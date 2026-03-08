@@ -6,6 +6,7 @@
 # Ignorar arquivos dentro de storage, mas rastrear as pastas
 storage/*
 !storage/**/
+#/public/storage
 
 storage/*.key
 /vendor
