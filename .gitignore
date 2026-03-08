@@ -3,6 +3,11 @@
 #/public/build
 /public/hot
 
+# Ignorar arquivos dentro de storage, mas rastrear as pastas
+storage/*
+!storage/**/
+
+storage/*.key
 /vendor
 .env
 .env.backup
